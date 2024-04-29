@@ -1,14 +1,13 @@
-/*Variables for further development of code*/
+
 let form = document.getElementById("form")
 let msg = document.getElementById("msg")
 let input = document.getElementById("input")
 let posts = document.getElementById("posts")
 form.addEventListener("submit", (e) => {
-    e.preventDefault(); /*Cancellable events are prevented*/
+    e.preventDefault(); 
     console.log("button clicked");
     fulemp();//
-})
-/*Function to display if an input has been given or not. */
+}
 let fulemp = () => {
     if (input.value === "") {
         msg.innerHTML = "Post cannot be empty"
@@ -19,15 +18,13 @@ let fulemp = () => {
         accData();
     }
 }
-//object to store data //
+
 let data = {};
-/*Appends the object "data" and saves it */
 let accData = () => {
     data["text"] = input.value;
     console.log(data);
     makepost();
 }
-/*Usage template literal to display and store the input given */
 let makepost = () => {
     posts.innerHTML +=
     `<div>
